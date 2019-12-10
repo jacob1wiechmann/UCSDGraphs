@@ -252,6 +252,7 @@ public abstract class Graph {
 
 
 		// For testing of Part 1 functionality
+		
 		// Add your tests here to make sure your degreeSequence method is returning
 		// the correct list, after examining the graphs.
 		System.out.println("Loading graphs based on real data...");
@@ -262,8 +263,6 @@ public abstract class Graph {
 		GraphAdjMatrix graphFromFile = new GraphAdjMatrix();
 		GraphLoader.loadRoadMap("data/testdata/simpletest.map", graphFromFile);
 		System.out.println(graphFromFile);
-		graphFromFile.removeEdge(0, 1);
-		graphFromFile.removeEdge(1, 0);
 		System.out.println("Observe all degrees are <= 12.");
 		System.out.println("****");
 
@@ -277,6 +276,9 @@ public abstract class Graph {
 		System.out.println(airportGraph);
 		System.out.println("Observe most degrees are small (1-30), eight are over 100.");
 		System.out.println("****");
+		airportGraph.removeEdge(8, 6);
+		airportGraph.removeEdge(6, 8);
+		airportGraph.removeEdge(1, 15);
 		
 		//For testing Part 2 functionality
 		// Test your distance2 code here.

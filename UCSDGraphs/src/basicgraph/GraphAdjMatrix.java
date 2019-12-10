@@ -55,7 +55,7 @@ public class GraphAdjMatrix extends Graph {
 	    // TODO: you will implement this method
 		for (int i = startVertex; i < adjMatrix[startVertex].length; i--) {
 			endVertex--;
-			adjMatrix[startVertex][endVertex] = 0;
+			adjMatrix[startVertex][endVertex] = 0 ;
 		}
 	}
 
