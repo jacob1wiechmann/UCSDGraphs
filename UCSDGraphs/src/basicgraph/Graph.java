@@ -250,6 +250,7 @@ public abstract class Graph {
 		GraphLoader.createIntersectionsFile("data/maps/ucsd.map", "data/intersections/ucsd.intersections");
 		
 
+
 		// For testing of Part 1 functionality
 		// Add your tests here to make sure your degreeSequence method is returning
 		// the correct list, after examining the graphs.
@@ -261,7 +262,8 @@ public abstract class Graph {
 		GraphAdjMatrix graphFromFile = new GraphAdjMatrix();
 		GraphLoader.loadRoadMap("data/testdata/simpletest.map", graphFromFile);
 		System.out.println(graphFromFile);
-		
+		graphFromFile.removeEdge(0, 1);
+		graphFromFile.removeEdge(1, 0);
 		System.out.println("Observe all degrees are <= 12.");
 		System.out.println("****");
 
