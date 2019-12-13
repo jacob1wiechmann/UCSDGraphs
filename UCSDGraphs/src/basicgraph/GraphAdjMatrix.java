@@ -53,11 +53,9 @@ public class GraphAdjMatrix extends Graph {
 	 */	
 	public void implementRemoveEdge(Integer startVertex, Integer endVertex) {
 	    // TODO: you will implement this method
-		for (int i = startVertex; i < adjMatrix[startVertex].length; i--) {
-			endVertex--;
-			adjMatrix[startVertex][endVertex] = 0 ;
+		adjMatrix[startVertex][endVertex] -= 1;
 		}
-	}
+	
 
 	public void implementAddEdge(int v, int w) {
 		adjMatrix[v][w] += 1;
